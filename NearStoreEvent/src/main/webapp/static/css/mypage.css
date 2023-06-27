@@ -1,0 +1,97 @@
+@charset "EUC-KR";
+
+body {
+	font-family: 'Jua', sans-serif;
+}
+
+.sidenav {
+    width: 200px;
+    height: auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-right: 1px solid #dee2e6;
+}
+
+.sidenav h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidenav a {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.content {
+    display: flex;
+    margin-bottom:150px
+}
+
+.myInfo {
+    margin-top: 20px;
+    margin-left: 20px;
+    width:80%
+}
+
+.content h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    border-spacing: 10px;
+    border-collapse: collapse;  /* 货肺款 胶鸥老 */
+}
+
+table th, table td { /* 货肺款 胶鸥老 */
+    padding: 10px;
+    border: 1px solid #dee2e6;
+}
+
+table th { /* 货肺款 胶鸥老 */
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+input[type=button] {
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: #6c757d;
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    float:right;
+    margin-left:10px
+}
+
+input[type=button]:hover {
+    background-color: #5a6268;
+}
+
+.footer-container {
+    justify-content: space-between;
+    background-color: #333;
+    padding: 15px;
+    color: #fff;
+    font-size: 16px;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+input, select {
+  font-size: 14px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  width:500px;
+}
+input[type=button] {
+    background-color: #5a6268;
+    width:auto;
+}

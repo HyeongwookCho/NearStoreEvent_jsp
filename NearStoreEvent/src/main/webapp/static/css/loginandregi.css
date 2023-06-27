@@ -1,0 +1,89 @@
+/* register.html */
+
+body {
+  	font-family: 'Gothic A1', sans-serif;
+    line-height: 1.6;
+    background-color: #628281;
+  }
+  
+main {
+  width: 400px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+input, select {
+  font-size: 14px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+  
+  button {
+  font-size: 14px;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #333;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+button[type="button"] {
+  background-color: #555;
+}
+
+  /* login.html */
+
+  .login-box {
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .login-links {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

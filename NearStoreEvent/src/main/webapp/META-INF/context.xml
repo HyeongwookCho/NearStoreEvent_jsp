@@ -1,0 +1,13 @@
+<Context>
+   <Resource
+      auth="Container"
+      driverClassName="com.mysql.jdbc.Driver"
+      url="jdbc:mysql://localhost:3306/storeevent?autoReconnect=true"
+      username="root"
+      password="1234"
+      name="jdbc/mysql"
+      type="javax.sql.DataSource"
+      maxActive="100"
+      maxIdle="30"
+      maxWait="10000" />
+</Context>

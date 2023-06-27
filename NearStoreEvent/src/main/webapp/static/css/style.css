@@ -1,0 +1,475 @@
+/* 초기화 코드 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ 
+/*시작*/
+body{
+	font-family: 'Jua', sans-serif;
+}
+
+.nav_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #43655A;
+  padding: 20px;
+  width : 100%;
+}
+
+
+.nav_bar_searchbar {
+  display: flex;
+  border-radius:3px;
+  justify-content:center;
+}
+
+.nav_bar_searchbar input[type="text"] {
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 3px 0 0 3px;
+}
+
+.nav_bar_searchbar input[type="submit"] {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color:#3B3B3B;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 3px 3px 0;
+}
+.eventInfo_categori_wrapper {
+    justify-content:center;
+    padding: 20px 0;
+  border-radius:3px;
+}
+
+.eventInfo_categori_wrapper select {
+    padding: 5px;
+    font-size: 1.1em;
+  border-radius:3px;
+}
+.eventInfo_wholebtn {
+  padding: 10px 15px;
+  font-size: 20px;
+  background-color:#068488;
+  border:2px solid black;
+  color: #fff;
+  cursor: pointer;
+  border-radius:3px;
+}
+
+.eventInfo_category{
+	width:300px;
+	cursor: pointer;
+}
+.sign_wrapper {
+  display: flex;
+}
+
+.nav_bar_login, .nav_bar_signup {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.nav_bar_login a, .nav_bar_signup a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav_bar_login a:hover, .nav_bar_signup a:hover {
+  text-decoration: underline;
+}
+.eventInfo_header_wrapper{
+	justify-content:center;
+	font-family: 'Jua', sans-serif;
+}
+.bg {
+    background-image: url("../media/town.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.eventInfo_text >.bg> #text1{
+  color:#333;
+  padding : 70px;
+  padding-top : 120px;
+  text-align:center;
+  background-color: rgba(255, 255, 255, 0.5);
+  width:100%;
+  margin:0;
+  font-size:50px;
+}
+.down-arrow{
+	font-weight:bold;
+}
+.eventInfo_text>.eventInfo_function> #text2{
+  background-color: #B1BDC5;
+  padding : 40px;
+  text-align:center;
+  margin:0;
+  
+}
+.text3{
+  padding : 50px;
+  text-align:center;
+}
+
+.eventInfo_location{
+	background-color: #889FA5;
+	padding : 50px;
+}
+.mypostion_wrapper{
+	text-align:center;
+}
+.eventInfo_location > #text4{
+	background-color: #889FA5;
+	margin:0;
+	padding:20px;
+	text-align:center;
+}
+.eventInfo_function{
+  background-color: #B1BDC5;
+  padding : 50px;
+  text-align:center;
+}
+.myposition_info{
+	display:block;
+}
+
+#currentGeoLocation {
+    background-color: #3B3B3B;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    margin-bottom:20px;
+    border-radius:5px;
+}
+
+#currentGeoLocation:hover {
+    background-color: black;
+}
+
+.myposition_function {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#show1KmEvents, #show3KmEvents,#show5KmEvents {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius:5px;
+    margin-left:10px;
+}
+
+#show1KmEvents {
+    background-color: #4CAF50;
+}
+
+#show1KmEvents:hover {
+    background-color: #45a049;
+}
+
+#show3KmEvents {
+    background-color: #2196F3;
+}
+
+#show3KmEvents:hover {
+    background-color: #1483de;
+}
+
+#show5KmEvents {
+    background-color: #ff5722;
+}
+
+#show5KmEvents:hover {
+    background-color: #e64a19;
+}
+.eventInfo_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+.eventInfo_grid {
+   	display: grid;
+    gap: 50px;
+    padding: 20px;
+	font-family: 'Jua', sans-serif;
+}
+
+/*가로 폭이 768px 이상일 때 3x3으로 설정. */
+@media (min-width: 768px) {
+    .eventInfo_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+.eventInfo_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #B1BDC5;
+    width: 315px;
+    height: auto;
+    border: 2px solid black;
+}
+
+.eventInfo_img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.eventInfo_name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.eventInfo_event {
+    font-size: 1em;
+}
+
+
+/* 이벤트 등록 버튼 */
+.register-btn-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+
+.mypage {
+  background-color: #005A34;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.mypage-btn:hover {
+  background-color: #555;
+}
+
+.footer-container {
+  justify-content: space-between;
+  background-color: #43655A;
+  padding: 30px;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Gothic A1', sans-serif;
+}
+
+.footer-info{
+  text-align: center;
+}
+.event-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    background-color:#DADDE2;
+    box-shadow: 0 2px 4px rgba(0, 2, 3, 0.5);
+}
+
+.event-period {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.eventInfo_img {
+    max-width: 100%;
+    height: auto;
+}
+
+.event-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+}
+
+.event-content {
+    margin-top: 10px;
+    color: black;
+}
+
+.custom-header {
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.custom-title {
+  font-weight: bold;
+  font-size: 25px;
+  padding-top : 20px;
+}
+
+.custom-close {
+  font-size: 18px;
+}
+
+.custom-body {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.custom-footer {
+  background-color: #f0f0f0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.custom-close-btn {
+  font-size: 16px;
+}
+.pagination-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.page-item .page-link {
+    color: #007bff;
+    background-color: #fff;
+}
+
+.page-item.active .page-link {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.page-item .page-link:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+
+
+ .event-modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left : 10px;
+  }
+
+  .event-modal-location {
+    font-size: 14px;
+    color: #777;
+    padding-left : 10px;
+  }
+
+  .event-modal-period {
+    font-size: 12px;
+    font-style: italic;
+    padding-left : 10px;
+  }
+
+  .event-modal-img {
+    width: 100%;
+    height: auto;
+    border-radius : 10px;
+  }
+
+  .event-modal-content {
+    font-size: 20px;
+    font-weight : bold;
+    margin-top: 15px;
+    padding : 10px;
+  }
+
+  .event-modal-map {
+    width: 100%;
+    height: 300px;
+    border-radius : 5px;
+  }
+  
+  .event-modal-content-title{
+  	font-size : 25px;
+  	padding : 10px;
+  	
+  }
+  .event-modal-content-wrapper{
+  	border-radius : 7px;
+  	margin-bottom : 15px;
+  }
