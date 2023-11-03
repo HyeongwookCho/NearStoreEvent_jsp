@@ -36,49 +36,30 @@
 모든 유저는 회원 가입 및 로그인을 하지 않아도 이벤트 목록과 모달창을 통한 상세정보창을 사용할 수 있으며 카테고리 및 검색 기능도 사용 가능하다. 고객 유치를 위해 회원 가입 및 로그인을 진행하면 가게 등록 기능, 이벤트 등록 기능, 위치 기반 이벤트 목록 조회 기능을 사용 가능하도록 구현하였다. 위치 기반 기능은 가까운 거리부터 먼 거리까지 3단계로 나누어 설정할 수 있도록 구현하였다.
 
 ### 개발 배경
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/9ca44c04-0921-4880-961d-a01b803e9bf1/e194ef0c-4ead-4427-b72c-73b44a185c06/Untitled.png)
+![image](https://github.com/HyeongwookCho/NearStoreEvent_jsp/assets/86861803/4b3b8d6b-4557-4353-b5c4-04ffe93d5e1b)
 최근 6개월간의 ‘물가’ 키워드를 바탕으로 전국, 경제, 지역 일간지 뉴스 데이터를 분석하면 ‘오름세’, ‘인플레이션’, ‘외식비’ 등의 키워드가 많았다. 물가의 ‘상승’과 관련된 많은 분석 결과에 대해서 이 결과들이 사실에 근거한 내용인지 판단하고자 통계청과 tradingeconomics.com의 자료를 확인 및 분석하였다.
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/9ca44c04-0921-4880-961d-a01b803e9bf1/95631d25-ef35-4e60-ad64-799bb12441e2/Untitled.png)
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/9ca44c04-0921-4880-961d-a01b803e9bf1/bbb219a5-4c2c-4a9f-b16e-ee0f70674c46/Untitled.png)
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/9ca44c04-0921-4880-961d-a01b803e9bf1/d2e96a2c-8604-44d6-ad11-9e6238d3a8b0/Untitled.png)
+![image](https://github.com/HyeongwookCho/NearStoreEvent_jsp/assets/86861803/1a52e7c5-b41f-4a9c-8296-a6d4700594d9)
+![image](https://github.com/HyeongwookCho/NearStoreEvent_jsp/assets/86861803/8362e621-b404-4506-848b-53833be1a6fe)
 2023년 3월 대한민국의 경제 지표들을 종합해보면 소비자들이 실제로 느끼는 물가 상승률은 CPI가 4.20%인 만큼 상승하고 있으며, 식품 물가의 상승세도 있었다. 물가 상승이 예상되는 부문인 교통 및 주택 유틸리티 CPI도 전월 대비 감소하였으나 전반적으로 물가 상승이 지속되고 있다고 볼 수 있었다. 물가 상승은 통계적으로 유의미한 결과였으며, 물가 상승에 따라서 소비자에게 부담이 높아진 사실 역시 알 수 있다. 또한, 소상공인 및 기업의 입장에서도 경영 애로 요인으로 ‘소비 위축(38.2%)’, ‘비용 상승(22.8%)’, ‘소비자 물가 상승(15.4%)’ 순으로 꼽았다. 물가 상승으로 인한 소비 위축으로 인해 지역 경제 침체의 가능성이 높아지고 있다고 볼 수 있다.
 
 생활에 밀접한 영역인 마트 혹은 음식점에서 많은 사람들이 물가 상승을 체감한다. 다수의 유저가 이용하는 생활 밀접 어플리케이션을 몇 가지 조사한 결과 배달의 민족, 당근마켓, 인스타그램에서 많은 가게 및 기업이 웹/앱 서비스를 이용하여 홍보 및 이벤트를 진행한다. 하지만 배달의 민족에서는 프랜차이즈가 아니라면 이벤트의 진행 여부를 한 눈에 파악이 어려웠으며, 당근 마켓에서는 카테고리 분류가 나누어져 있지 않아 너무 다양한 글이 올라왔다. 마지막으로 인스타그램은 해당 가게를 운영하는 유저를 팔로우하고 있는 사람만이 정보를 얻을 수 있었다. 3개의 어플리케이션을 기반으로 차별화된 기능을 고려하여, 가게들의 이벤트 정보를 유저의 위치 정보 중심으로 소비자에게 찾고자 하는 이벤트를 카테고리 및 검색어별로 한 눈에 보여주며, 판매자는 간단하게 글을 작성하여 손쉽게 홍보 효과를 제공하는 서비스를 구현하고자 한다.
 
 ### 구현 결과
-
-![ 1. 메인 페이지 상단 화면입니다. 
-동네에서 진행하는 이벤트 정보를 제공하는 웹사이트임을 소개합니다.
-상단에는 header영역에서 로그인과 회원 가입을 진행할 수 있습니다.
-하단에서는 키워드 및 카테고리 별로 이벤트 정보를 필터링하여 볼 수 있도록 구성하였습니다.](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3997df6d-8f49-4a80-a5ef-4e07c1618317/Untitled.png)
-
+![image](https://github.com/HyeongwookCho/NearStoreEvent_jsp/blob/main/assets/uploadimage1.png)
  1. 메인 페이지 상단 화면입니다. 
 동네에서 진행하는 이벤트 정보를 제공하는 웹사이트임을 소개합니다.
 상단에는 header영역에서 로그인과 회원 가입을 진행할 수 있습니다.
 하단에서는 키워드 및 카테고리 별로 이벤트 정보를 필터링하여 볼 수 있도록 구성하였습니다.
-
-![ 2. 로그인 이후에는 자신의 위치를 기반으로 이벤트 목록을 가져올 수 있는 위치 기반 서비스를 추가 제공합니다. 이벤트를 게시한 가게의 주소와 현재 자신의 위치를 기반으로 정보를 필터링할 수 있습니다.](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ddd7eac5-0e55-454c-8787-dd9c782fc74d/Untitled.png)
-
+![image](https://github.com/HyeongwookCho/NearStoreEvent_jsp/blob/main/assets/uploadimage2.png)
  2. 로그인 이후에는 자신의 위치를 기반으로 이벤트 목록을 가져올 수 있는 위치 기반 서비스를 추가 제공합니다. 이벤트를 게시한 가게의 주소와 현재 자신의 위치를 기반으로 정보를 필터링할 수 있습니다.
-
-![ 3. 이벤트 정보는 하단에 3 x 3 형태로 추가되며 그 이상의 게시물이 존재할 경우에 페이징 처리를 하여 보기 쉽도록 구현하였습니다. 게시물을 클릭하게 되면 모달창으로 이벤트에 대한 자세한 정보와 가게의 주소 정보를 제공합니다. 이벤트 정보는 설정한 종료일이 지나면 자동으로 삭제되게 하였습니다.](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d9e32873-7d38-40c6-a13d-e2c9af4aa56d/Untitled.png)
-
+![image](https://github.com/HyeongwookCho/NearStoreEvent_jsp/blob/main/assets/uploadimage3.png)
  3. 이벤트 정보는 하단에 3 x 3 형태로 추가되며 그 이상의 게시물이 존재할 경우에 페이징 처리를 하여 보기 쉽도록 구현하였습니다. 게시물을 클릭하게 되면 모달창으로 이벤트에 대한 자세한 정보와 가게의 주소 정보를 제공합니다. 이벤트 정보는 설정한 종료일이 지나면 자동으로 삭제되게 하였습니다.
-
-![ 4. 로그인 이후 세션에 저장된 정보를 통해서 해당 유저에 대한 정보를 게시합니다. 회원 가입 시 기입된 유저의 정보는 JSP 파일에서 Javabeans를 통해 해당 데이터베이스에 접근합니다. Controller를 통해서 수정 및 삭제가 용이하도록 구현하였습니다. ](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/55acd467-ba6a-4b53-8c14-29f8edaad501/Untitled.png)
-
+![image](https://github.com/HyeongwookCho/NearStoreEvent_jsp/blob/main/assets/uploadimage4.png)
  4. 로그인 이후 세션에 저장된 정보를 통해서 해당 유저에 대한 정보를 게시합니다. 회원 가입 시 기입된 유저의 정보는 JSP 파일에서 Javabeans를 통해 해당 데이터베이스에 접근합니다. Controller를 통해서 수정 및 삭제가 용이하도록 구현하였습니다.
-
-![ 5. admin 페이지를 만들어 유저, 가게, 이벤트 정보들의 접근을 편리하게 구현하였습니다. 
-user_id를 클릭하게 되면 해당 유저가 등록한 가게 및 이벤트의 정보를 모두 확인할 수 있습니다.](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/39fac224-e8df-4542-9742-a0e7a778e4ff/Untitled.png)
-
+![image](https://github.com/HyeongwookCho/NearStoreEvent_jsp/blob/main/assets/uploadimage5.png)
  5. admin 페이지를 만들어 유저, 가게, 이벤트 정보들의 접근을 편리하게 구현하였습니다. 
 user_id를 클릭하게 되면 해당 유저가 등록한 가게 및 이벤트의 정보를 모두 확인할 수 있습니다.
-
-![ 6. user_id를 클릭하여 해당 유저에 대한 정보를 확인하는 모습입니다.
-가게를 등록한 이후 이벤트를 등록하지 않은 유저임을 알 수 있습니다.
-수정 및 삭제 버튼을 구현하여 서비스 운영에 편리하도록 구현하였습니다.](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/22cc2ff1-6739-46f0-919d-a7e75b44caa6/Untitled.png)
-
+![image](https://github.com/HyeongwookCho/NearStoreEvent_jsp/blob/main/assets/uploadimage6.png)
  6. user_id를 클릭하여 해당 유저에 대한 정보를 확인하는 모습입니다.
 가게를 등록한 이후 이벤트를 등록하지 않은 유저임을 알 수 있습니다.
 수정 및 삭제 버튼을 구현하여 서비스 운영에 편리하도록 구현하였습니다.
@@ -87,7 +68,7 @@ user_id를 클릭하게 되면 해당 유저가 등록한 가게 및 이벤트�
 
 ## 구성
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/87e60562-216a-47de-9d3c-7697e1d5cfbd/Untitled.png)
+![image](https://github.com/HyeongwookCho/NearStoreEvent_jsp/assets/86861803/58cbf81e-5984-4cfd-b4fe-d802267d51fe)
 
 **사용 기술 및 라이브러리**
 
